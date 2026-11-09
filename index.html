@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GitHub Pages テスト</title>
+  <style>
+    :root { --bg: #f6f8fa; --card: #ffffff; --text: #1f2328; --muted: #59636e; --accent: #1f883d; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg: #0d1117; --card: #161b22; --text: #e6edf3; --muted: #9198a1; --accent: #3fb950; }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center;
+      background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Noto Sans JP", sans-serif;
+      padding: 16px;
+    }
+    .card {
+      background: var(--card); border-radius: 12px; padding: 40px 32px;
+      max-width: 480px; width: 100%; text-align: center;
+      box-shadow: 0 1px 3px rgba(0,0,0,.12);
+    }
+    .badge {
+      display: inline-block; background: var(--accent); color: #fff;
+      border-radius: 999px; padding: 4px 12px; font-size: 13px; font-weight: 600;
+    }
+    h1 { font-size: 24px; margin: 16px 0 8px; }
+    p { color: var(--muted); line-height: 1.6; margin: 8px 0; }
+    code { font-size: 13px; word-break: break-all; }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="badge">✓ 公開成功</span>
+    <h1>GitHub Pages の動作確認</h1>
+    <p>このページが表示されていれば、GitHub Pages の設定は正しく動作しています。</p>
+    <p>表示URL：<code id="url"></code></p>
+    <p>表示日時：<span id="time"></span></p>
+  </main>
+  <script>
+    document.getElementById('url').textContent = location.href;
+    document.getElementById('time').textContent = new Date().toLocaleString('ja-JP');
+  </script>
+</body>
+</html>
